@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 6.4.0
+dependencies:
+  override:
+    - npm install
+  pre:
+    - ./bin/setup.sh
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm start
+      - npm run deploy

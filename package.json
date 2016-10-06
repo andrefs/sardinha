@@ -1,0 +1,32 @@
+{
+  "name": "sardinha",
+  "version": "0.0.1",
+  "description": "Static page blog using Contentful, CircleCI and Github Pages",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrefs/sardinha.git"
+  },
+  "keywords": [
+    "contentful",
+    "sardinha",
+    "metalsmith",
+    "github",
+    "circleci"
+  ],
+  "author": "Andre Santos",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/andrefs/sardinha/issues"
+  },
+  "homepage": "https://github.com/andrefs/sardinha#readme",
+  "dependencies": {
+    "contentful-metalsmith": "^0.5.0",
+    "glob": "^7.1.0",
+    "handlebars": "^4.0.5",
+    "metalsmith": "^2.2.0"
+  }
+}

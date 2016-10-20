@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-    <h1>{{ title }}</h1>
-    <div>
-        <ul>
-        {{#each data.entries}}
-            <li><a href="{{ _fileName }}">cenas: {{ fields.title }}</a></li>
-        {{/each}}
-        </ul>
-    </div>
-</body>
+    {{> head}}
+    <body class="home-template">
+    	<div id="page" class="site">
+            {{> header}}
+            {{> cover}}
+
+            <h1>{{ title }}</h1>
+            <div>
+                <ul>
+                {{#each data.entries}}
+                    <li><a href="{{ _fileName }}">{{ fields.title }}</a></li>
+                {{/each}}
+                </ul>
+            </div>
+
+            {{> footer}}
+        </div><!-- #page -->
+        {{> footer-scripts}}
+    </body>
 </html>
 

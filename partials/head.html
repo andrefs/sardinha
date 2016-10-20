@@ -1,0 +1,40 @@
+<head>
+	<meta charset="utf-8">
+
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="/assets/favicon.ico">
+
+	<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic%7CMontserrat:400,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+
+    <link rel="canonical" href="{{link}}" />
+    <meta name="referrer" content="origin" />
+
+    <meta property="og:site_name" content="{{title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:url" content="{{link}}" />
+    <meta property="og:image" content="{{header_bg_url}}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:url" content="{{link}}" />
+    <meta name="twitter:image:src" content="{{header_bg_url}}" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "{{title}}",
+    "url": "{{link}}",
+    "image": "{{header_bg_url}}",
+    "description": "{{description}}"
+}
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="{{title}}" href="{{link}}" />
+</head>

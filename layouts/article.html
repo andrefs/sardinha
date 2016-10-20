@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-    <h1>{{ data.fields.title }}</h1>
-    <div>{{ data.fields.body }}</div>
-</body>
+    {{> head}}
+    <body class="home-template">
+    	<div id="page" class="site">
+            {{> header}}
+            <h1>{{ data.fields.title }}</h1>
+            <div>{{ data.fields.body }}</div>
+            {{> footer}}
+        </div><!-- #page -->
+        {{> footer-scripts}}
+    </body>
 </html>
 

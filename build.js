@@ -38,10 +38,10 @@ Metalsmith(__dirname)
     source: 'assets/',
     destination: 'assets/'
   }))
-  .use(markdown())
-  .use(dataMarkdown({
-    removeAttributeAfterwards: true
-  }))
+  //.use(markdown())
+  //.use(dataMarkdown({
+  //  removeAttributeAfterwards: true
+  //}))
   .build(function(err) {
     if (err) { throw err; }
     console.log('Successfully build metalsmith')

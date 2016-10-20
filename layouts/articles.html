@@ -4,17 +4,19 @@
     <body class="home-template">
     	<div id="page" class="site">
             {{> header}}
-            {{> cover}}
-
-            <h1>{{ title }}</h1>
-            <div>
-                <ul>
-                {{#each data.entries}}
-                    <li><a href="{{ _fileName }}">{{ fields.title }}</a></li>
-                {{/each}}
-                </ul>
-            </div>
-
+            <main class="site-main" role="main">
+            	<div class="site-content inner-wide">
+                    {{> cover}}
+                    <h1>{{ title }}</h1>
+                    <div>
+                        <ul>
+                        {{#each data.entries}}
+                            <li><a href="{{ _fileName }}">{{ fields.title }}</a></li>
+                        {{/each}}
+                        </ul>
+                    </div>
+            	</div><!-- .site-content -->
+            </main><!-- .site-main -->
             {{> footer}}
         </div><!-- #page -->
         {{> footer-scripts}}

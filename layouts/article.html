@@ -4,8 +4,11 @@
     <body class="home-template">
     	<div id="page" class="site">
             {{> header}}
-            <h1>{{ data.fields.title }}</h1>
-            <div>{{ data.fields.body }}</div>
+            <main class="site-main" role="main">
+                <div class="site-content">
+                    {{> article/content data.fields}}
+                </div><!-- .site-content -->
+            </main><!-- .site-main -->
             {{> footer}}
         </div><!-- #page -->
         {{> footer-scripts}}

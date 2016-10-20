@@ -5,6 +5,7 @@ const assets       = require('metalsmith-assets')
 const markdown     = require('metalsmith-markdown')
 const dataMarkdown = require('metalsmith-data-markdown')
 const contentful   = require('contentful-metalsmith')
+const debug        = require('metalsmith-debug');
 
 const handlebars = require('handlebars')
 
@@ -24,6 +25,7 @@ glob.sync('helpers/*.js').forEach((fileName) => {
 Metalsmith(__dirname)
   .source('src')
   .destination('build')
+  .use(debug())
   .use(contentful({
     space_id: process.env.CTFL_SPACE_ID,
     access_token: process.env.CTFL_ACCESS_TOKEN

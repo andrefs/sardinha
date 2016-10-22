@@ -1,0 +1,20 @@
+<article>
+    <div class="post-category">
+        <p>{{categorie.fields.title}}</p>
+    </div>
+    <div class="post-title">
+        <h2><a href="{{ _fileName }}">{{ title }}</a></h2>
+    </div>
+    <p>
+        <span class="post-date">{{publishedAt}}</span> | <span class="post-comment-count">
+    </p>
+    <div class="post-image">
+        <img style="100%" src="{{mainMedia.fields.file.url}}">
+    </div>
+    <div class="post-lead">
+        <p>{{lead}}</p>
+    </div>
+    <div class="post-actions">
+        <p><a href="{{ _fileName }}">Read more</a></p>
+    </div>
+</article>

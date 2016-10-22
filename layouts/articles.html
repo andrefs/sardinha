@@ -5,36 +5,9 @@
         {{> header}}
         <div class="container">
             <div class="row">
-                <div class="col-sm-1 offset-sm-1 blog-sidebar">
-                </div>
-                <div class="col-sm-7 blog-main">
-                {{#each data.entries}}
-                    <div class="row">
-                        <article>
-                            <div class="post-category">
-                                <p>{{fields.categorie.fields.title}}</p>
-                            </div>
-                            <div class="post-title">
-                                <h2><a href="{{ _fileName }}">{{ fields.title }}</a></h2>
-                            </div>
-                            <p>
-                                <span class="post-date">{{fields.publishedAt}}</span>|<span class="post-comment-count">
-                            </p>
-                            <div class="post-image">
-                                <img style="100%" src="{{fields.mainMedia.fields.file.url}}">
-                            </div>
-                            <div class="post-lead">
-                                <p>{{fields.lead}}</p>
-                            </div>
-                            <div class="post-actions">
-                                <p><a href="{{ _fileName }}">Read more</a></p>
-                            </div>
-                        </article>
-                    </div>
-                {{/each}}
-                </div>
-                <div class="col-sm-2 offset-sm-1 blog-sidebar">
-                </div>
+                {{> articles/left-sidebar}}
+                {{> articles/main-list posts=data.entries}}
+                {{> articles/right-sidebar}}
             </div>
         </div>
         {{> footer}}

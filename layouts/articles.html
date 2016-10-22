@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
     {{> head}}
-    <body class="home-template">
-    	<div id="page" class="site">
-            {{> header}}
-            <main class="site-main" role="main">
-            	<div class="site-content inner-wide">
-                    {{> cover}}
-                    <h1>{{ title }}</h1>
-                    <div>
-                        <ul>
-                        {{#each data.entries}}
-                            <li><a href="{{ _fileName }}">{{ fields.title }}</a></li>
-                        {{/each}}
-                        </ul>
+    <body>
+        {{> header}}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1 offset-sm-1 blog-sidebar">
+                </div>
+                <div class="col-sm-7 blog-main">
+                {{#each data.entries}}
+                    <div class="row">
+                        <article>
+                            <div class="post-category">
+                                <p>{{fields.categorie.fields.title}}</p>
+                            </div>
+                            <div class="post-title">
+                                <h2><a href="{{ _fileName }}">{{ fields.title }}</a></h2>
+                            </div>
+                            <p>
+                                <span class="post-date">{{fields.publishedAt}}</span>|<span class="post-comment-count">
+                            </p>
+                            <div class="post-image">
+                                <img style="100%" src="{{fields.mainMedia.fields.file.url}}">
+                            </div>
+                            <div class="post-lead">
+                                <p>{{fields.lead}}</p>
+                            </div>
+                            <div class="post-actions">
+                                <p><a href="{{ _fileName }}">Read more</a></p>
+                            </div>
+                        </article>
                     </div>
-            	</div><!-- .site-content -->
-            </main><!-- .site-main -->
-            {{> footer}}
-        </div><!-- #page -->
+                {{/each}}
+                </div>
+                <div class="col-sm-2 offset-sm-1 blog-sidebar">
+                </div>
+            </div>
+        </div>
+        {{> footer}}
         {{> footer-scripts}}
     </body>
 </html>

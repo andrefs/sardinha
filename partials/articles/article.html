@@ -1,9 +1,9 @@
 <article>
     <div class="post-category">
-        <p>{{categorie.fields.title}}</p>
+        <p>{{category.fields.title}}</p>
     </div>
     <div class="post-title">
-        <h2><a href="{{ _fileName }}">{{ title }}</a></h2>
+        <h2><a href="/{{ _fileName }}">{{ title }}</a></h2>
     </div>
     <p>
         <span class="post-date">{{publishedAt}}</span> | <span class="post-comment-count">
@@ -15,6 +15,6 @@
         <p>{{lead}}</p>
     </div>
     <div class="post-actions">
-        <p><a href="{{ _fileName }}">Read more</a></p>
+        <p><a href="/{{ _fileName }}">Read more</a></p>
     </div>
 </article>

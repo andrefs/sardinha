@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     {{> head}}
-    <body class="home-template">
-    	<div id="page" class="site">
-            {{> header}}
-            <main class="site-main" role="main">
-                <div class="site-content">
-                    {{> article/content data.fields}}
-                </div><!-- .site-content -->
-            </main><!-- .site-main -->
-            {{> footer}}
-        </div><!-- #page -->
+    <body>
+        {{> header}}
+        <div class="container">
+            <div class="row">
+                {{> articles/left-sidebar}}
+                {{> article/content data.fields}}
+                {{> articles/right-sidebar}}
+            </div>
+        </div>
+        {{> footer}}
         {{> footer-scripts}}
     </body>
 </html>
